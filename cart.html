@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="cart.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body style="background-color: white;">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-black fixed-top">
+    <!--Brand/logo-->
+    <a class="navbar-brand" href="#">
+      <img src="img/Logo.png" alt="logo" style="width: 200px;">
+    </a>
+    <!--Links-->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#menu-add">OUR MENU</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#cart">CHECK OUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="menu-add" id="menu-add">
+    <h1>Domino's Pizza Menu</h1>
+    <!-- Dropdown Button -->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Filter
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" onclick="selectOption('Veg')">Veg</a>
+        <a class="dropdown-item" href="#" onclick="selectOption('Non-Veg')">Non Veg</a>
+        <a class="dropdown-item" href="#" onclick="selectOption('All')">All</a>
+      </div>
+      <!-- Selected Option Display -->
+      <span id="selectedOption"></span>
+    </div>
+    <!-- Pizza Items -->
+    <div class="menu-container">
+      <div class="pizza-item Veg">
+        <img src="img/veg_pizza (7).png" alt="Veggie Pizza">
+        <h3>FRESH VEGGIE</h3>
+        <p style="font-size:smaller">Onion & Capsicum</p>
+        <p>Rs.250</p>
+        <button onclick="addToCart('FRESH VEGGIE', 250)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Non-Veg">
+        <img src="img/nonveg_pizza (1).png" alt="Non Veggie Pizza">
+        <h3>NON VEGGIE DELIGHT</h3>
+        <p style="font-size:smaller">Chicken & Capsicum</p>
+        <p>Rs.500</p>
+        <button onclick="addToCart('NON VEGGIE DELIGHT', 500)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Veg">
+        <img src="img/veg_pizza (2).png" alt="Pepperoni Pizza">
+        <h3>MARGHERITA</h3>
+        <p style="font-size:smaller;">A hugely popular margherita, with a deliciously tangy single cheese topping</p>
+        <p>Rs.200</p>
+        <button onclick="addToCart('MARGHERITA', 200)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Non-Veg">
+        <img src="img/nonveg_pizza (4).png" alt="Non Veggie Pizza">
+        <h3>CHICKEN DOMINATOR</h3>
+        <p style="font-size:smaller"> Treat your taste buds with Double Pepper Barbecue Chicken, Peri-Peri Chicken, Chicken Tikka & Grilled Chicken Rashers</p>
+        <p>Rs.550</p>
+        <button onclick="addToCart('CHICKEN TIKKA', 550)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Veg">
+        <img src="img/veg_pizza (3).png" alt="Pepperoni Pizza">
+        <h3>PEPPY PANEER</h3>
+        <p style="font-size:smaller;">Chunky paneer with crisp capsicum and spicy red pepper - quite a mouthful!</p>
+        <p>Rs.300</p>
+        <button onclick="addToCart('PEPPY PANEER', 300)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Non-Veg">
+        <img src="img/nonveg_pizza (2).png" alt="Non Veggie Pizza">
+        <h3>CHICKEN TIKKA</h3>
+        <p style="font-size:smaller">Chicken Tikka & Red Paprika</p>
+        <p>Rs.450</p>
+        <button onclick="addToCart('CHICKEN TIKKA', 450)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Veg">
+        <img src="img/veg_pizza (4).png" alt="Pepperoni Pizza">
+        <h3>INDI TANDOORI PANEER</h3>
+        <p style="font-size:smaller;">It is hot. It is spicy. It is oh-so-Indian. Tandoori paneer with capsicum I red paprika I mint mayo</p>
+        <p>Rs.350</p>
+        <button onclick="addToCart('INDI TANDOORI PANEER', 300)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Non-Veg">
+        <img src="img/nonveg_pizza (3).png" alt="Non Veggie Pizza">
+        <h3>PEPPER BARBECUE & ONION</h3>
+        <p style="font-size:smaller">Pepper Barbecue Chicken I Onion</p>
+        <p>Rs.400</p>
+        <button onclick="addToCart('CHICKEN TIKKA', 400)">Add to Cart</button>
+      </div>
+      
+      <div class="pizza-item Veg">
+        <img src="img/veg_pizza (5).png" alt="Pepperoni Pizza">
+        <h3>MEXICAN GREEN WAVE</h3>
+        <p style="font-size:smaller;">A pizza loaded with crunchy onions, crisp capsicum, juicy tomatoes and jalapeno with a liberal sprinkling of exotic Mexican herbs.</p>
+        <p>Rs.300</p>
+        <button onclick="addToCart('MEXICAN GREEN WAVE', 300)">Add to Cart</button>
+      </div>
+
+      <div class="pizza-item Veg">
+        <img src="img/veg_pizza (6).png" alt="Pepperoni Pizza">
+        <h3>VEGGIE PARADISE</h3>
+        <p style="font-size:smaller;">Goldern Corn, Black Olives, Capsicum & Red Paprika</p>
+        <p>Rs.350</p>
+        <button onclick="addToCart('VEGGIE PARADISE', 350)">Add to Cart</button>
+      </div>
+      
+      
+    </div>
+  </div>
+  <!-- Cart Section -->
+  <div class="cart-container" id="cart">
+    <h2>Cart</h2>
+    <!-- Cart items will be displayed here -->
+    <div id="cart-items"></div>
+    <p id="totalAmount">Total: Rs. 0</p>
+    <!-- Checkout button always visible -->
+    <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+  </div>
+  
+  
+<!-- Footer Section Start -->
+<footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="footer-logo">
+          <a href="" class="logo-image">
+            <img 
+              srcset="img/Logo.png 1x, img/Logo@2x.png 2x, img/Logo@3x.png 3x" 
+              src="img/Logo.png"
+            />
+          </a><br>
+        </div>
+        <div class="footer-text">
+          <p>Thank You For Visiting Our Website..!</p>
+        </div>
+        <div class="footer-social-links">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+          <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright &copy;Domino’s Clone 2024</p>
+      <p>Project Submitted By - Sharmistha Pal</p>
+      <p>Email : sharmistha@gmail.com</p>
+    </div>
+  </div>
+</footer>
+<!-- Footer Section End -->
+
+<script>
+function selectOption(option) {
+  document.getElementById("selectedOption").textContent = option;
+  // Show all items initially
+  const pizzaItems = document.querySelectorAll('.pizza-item');
+  pizzaItems.forEach(item => {
+    item.style.display = 'block';
+  });
+
+  // Filter items based on selected option
+  if (option === 'Veg') {
+    const nonVegItems = document.querySelectorAll('.pizza-item.Non-Veg');
+    nonVegItems.forEach(item => {
+      item.style.display = 'none';
+    });
+  } else if (option === 'Non-Veg') {
+    const vegItems = document.querySelectorAll('.pizza-item.Veg');
+    vegItems.forEach(item => {
+      item.style.display = 'none';
+    });
+  }
+}
+
+let cartItems = [];
+
+function addToCart(itemName, price) {
+  // Check if the item already exists in the cart
+  const existingItem = cartItems.find(item => item.name === itemName);
+  if (existingItem) {
+    // If the item exists, update the quantity and amount
+    existingItem.quantity++;
+    existingItem.amount += price;
+  } else {
+    // If the item doesn't exist, add it to the cart
+    cartItems.push({ name: itemName, price: price, quantity: 1, amount: price });
+  }
+  updateCart();
+}
+
+function updateCart() {
+  const cartElement = document.getElementById('cart-items');
+  const totalElement = document.getElementById('totalAmount');
+  cartElement.innerHTML = '';
+  let totalAmount = 0;
+  cartItems.forEach(item => {
+    const itemElement = document.createElement('div');
+    itemElement.classList.add('cart-item');
+    itemElement.innerHTML = `<p>${item.name} - Rs.${item.price} (Qty: ${item.quantity}, Amt: Rs.${item.amount})</p>`;
+    cartElement.appendChild(itemElement);
+    totalAmount += item.amount;
+  });
+  totalElement.textContent = `Total: Rs. ${totalAmount}`;
+
+  // Show checkout button
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  checkoutBtn.style.display = 'block';
+}
+
+function checkout() {
+  alert('Thank you for your purchase!');
+  cartItems = [];
+  updateCart();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrapper" id="container">
+    <div id="domino-header">
+      <div class="header" id="top-header">
+        <div class="hamburger" onclick="openDrawer()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="" class="logo-image">
+          <img 
+            srcset="img/Logo.png 1x, img/Logo@2x.png 2x, img/Logo@3x.png 3x" 
+            src="img/Logo.png"
+          />
+        </a>
+        <ul class="upper-footer-links">
+          <li><a href="#menu">OUR MENU</a></li>
+          <li><a href="#explore">DOMINO'S STORES</a></li>
+          <li class="link-desktop"><a href="#seo-content">ABOUT</a></li>
+          <li onclick="corpMenuTopClicked();" class="link-desktop"><a href="#offers">COUPONS & OFFERS</a></li>
+          <li class="link-desktop"><a href="#footer">CONTACT</a></li>
+        </ul>
+        <a class="dnld-app-header" href="https://dominos.onelink.me/uM7R/3e839899">
+          Download App
+        </a>
+      </div>
+      <div id="sideNavBar" class="sidenav" onscroll="stickyNavHeader()">
+        <ul class="side-nav-header" id="sideNavHeader">
+          <li onclick="closeDrawer()">
+            <img 
+              srcset="img/Close@3x.png 3x, img/Close.png 1x, img/Close@2x.png 2x" src="img/Close.png"
+              alt="Close"
+            >
+          </li>
+          <li>
+            <a href="/">
+              <img 
+                srcset="img/Home@3x.png 3x, img/Home.png 1x, img/Home@2x.png 2x" src="img/Home.png"
+                alt="Home"
+              >
+            </a>
+          </li>
+        </ul>
+        <a href="#menu" class="side-nav-list">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img src="img/side_menu.png"
+                alt="side_menu"
+              >
+            </li>
+            <li>Our Menu</li>
+          </ul>
+        </a>
+        <a href="#bodyClass">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                src="Offers.png"
+                alt="Offers"
+              >
+            </li>
+            <li>Special Offer</li>
+          </ul>
+        </a>
+        <a href="/gift-vouchers">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Gift_Card@3x.png 3x, img/Gift_Card.png 1x, img/Gift_Card@2x.png 2x" src="img/Gift_Card.png"
+                alt="Gift Card"
+              >
+            </li>
+            <li>Gift Card</li>
+          </ul>
+        </a>
+        <a href="/store-location">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                src="img/Store_Finder.png"
+                alt="Store_Finder"
+              >
+            </li>
+            <li>Store Finder</li>
+          </ul>
+        </a>
+        <a href="/about-us">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Inside_Dominos@3x.png 3x, img/Inside_Dominos.png 1x, img/Inside_Dominos@2x.png 2x" src="img/Inside_Dominos.png"
+                alt="Inside_Dominos"
+              >
+            </li>
+            <li>Inside Domino’s</li>
+          </ul>
+        </a> 
+        <a href="/bday-party">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Birthday_party@3x.png 3x, img/Birthday_party.png 1x, img/Birthday_party@2x.png 2x" src="img/Birthday_party.png"
+                alt="Birthday_party"
+              >
+            </li>
+            <li>Birthday Party</li>
+          </ul>
+        </a>
+        <a href="/wedding">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Coporate_orders@3x.png 3x, img/Coporate_orders.png 1x, img/Coporate_orders@2x.png 2x" src="img/Coporate_orders.png"
+                alt="Coporate_orders"
+              >
+            </li>
+            <li>Coporate Orders</li>
+          </ul>
+        </a>
+        <a href="/blog">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Blog@3x.png 3x, img/Blog.png 1x, img/Blog@2x.png 2x" src="img/Blog.png"
+                alt="Blog"
+              >
+            </li>
+            <li>Blogs</li>
+          </ul>
+        </a>
+        <a href="http://www.jubilantfoodworks.com/investors/">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Investor@3x.png 3x, img/Investor.png 1x, img/Investor@2x.png 2x" src="img/Investor.png"
+                alt="Investor"
+              >
+            </li>
+            <li>Investors</li>
+          </ul>
+        </a>
+        <a href="/feedback">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Feedback@3x.png 3x,img/Feedback.png 1x,img/Feedback@2x.png 2x" src="img/Feedback.png"
+                alt="Feedback"
+              >
+            </li>
+            <li>Feedback</li>
+          </ul>
+        </a>
+        <a href="/contact">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Contact@3x.png 3x, img/Contact.png 1x, img/Contact@2x.png 2x" src="img/Contact.png"
+                alt="Contact"
+              >
+            </li>
+            <li>Contacts</li>
+          </ul>
+        </a>
+        <a href="/advertisement">
+          <ul class="side-nav-link">
+            <li class="side-nav-icon">
+              <img 
+                srcset="img/Add@3x.png 3x,img/Add.png 1x, img/Add@2x.png 2x" src="img/Add.png"
+                alt="Add"
+              >
+            </li>
+            <li>ADS</li>
+          </ul>
+        </a>
+      </div>
+      <div class="online-order" id="online-banner">
+        <div class="banner-text">
+          <h1 class="order-heading">Domino's online ordering</h1>
+          <p class="deliver-message" id="delivery-text">Yummy pizza delivered fast & fresh</p>
+          <a href="cart.html" >
+            <button>ORDER ONLINE NOW</button>
+          </a>
+        </div>
+        <a href="#" >
+          <img 
+            src="img/header_bg.png"
+            alt="Food Delivery & Order Pizza Online" 
+            id="bannerImage"
+          />
+          <img 
+            
+            src="img/banner_brand_20210922.jpg"
+            alt="Food Delivery & Order Pizza Online" 
+            id="higeneImage"
+          />
+          <img 
+            srcset="img/Banner_sticky.png 1x, img/Banner_sticky@2x.png 2x, img/Banner_sticky@3x.png 3x" 
+            src="img/Banner_sticky.png"
+            alt="Food Delivery & Order Pizza Online" 
+            id="bannerImageSticky"
+            class="hide"
+          />
+        </a>
+      </div>
+    </div>
+      
+    <div class="carousel-wrapper">
+      <div class="offers" id="offers">
+        <h2 class="carousel-title">Coupons & Offers</h2>
+        <div class="offers-container">
+          <div class="slides" id="slides">
+                <img class="offers-slide" src="img/amazon_home_20210412.jpg" alt="AmazonPay Offer">
+                <img class="offers-slide" src="img/Home_Paytm_20210519.jpg" alt="Paytm Offer">
+                <img class="offers-slide" src="img/Home_airtel_30082020.jpg" alt="Airtel Offer">
+                <img class="offers-slide" src="img/Home_Freecharge_20210405.jpg" alt="Freecharge Offer">
+                <img class="offers-slide" src="img/Dominos_Mobi_Home_20210503.jpg" alt="Mobiwik Offer">
+                <img class="offers-slide" src="img/Home_payzapp_20201029.jpg" alt="PayZapp Offer" >
+                <img class="offers-slide" src="img/Home_au_20201029.jpg" alt="AU Bank Offer">
+                <img class="offers-slide" src="img/amazon_home_20210412.jpg">
+        </div>
+        </div>
+      </div>
+      </div>
+    
+    
+    <div class="explore" id="explore">
+      <h2 class="carousel-title">Explore</h2>
+      <div class="explore-slider">
+        <div class="explore-slide-wrapper">
+          <a class="explore-slide" href="cart.html">
+            <img 
+              srcset="img/menu.png 1x, img/menu@2x.png 2x, img/menu@3x.png 3x" 
+              src="img/menu.png"
+              alt="explore Menu" 
+            />
+            <div class="explore-desc">
+              <h3 class="explore-heading">Our Menu</h3>
+              <p class="content">Explore our range of delicious Pizzas, delivered in 30 minutes!</p>
+            </div>
+          </a>
+          <a class="book-now" href="cart.html">
+            <span>DISCOVER PIZZA</span>
+          </a>
+        </div>
+        <div class="explore-slide-wrapper">
+          <a class="explore-slide" href="#">
+            <img 
+              srcset="img/store.png 1x, img/store@2x.png 2x, img/store@3x.png 3x" 
+              src="img/store.png"
+              alt="store Locator" 
+            />
+            <div class="explore-desc">
+              <h3 class="explore-heading">NEARBY STORE</h3>
+              <p class="content">Find a Domino’s Pizza restaurant near you</p>
+            </div>
+          </a>
+          <a class="book-now" href="#">
+            <span>FIND DOMINO'S STORE</span>
+          </a>
+        </div>
+        <div class="explore-slide-wrapper">
+          <a class="explore-slide" href="#">
+            <img 
+              srcset="img/birthday.png 1x, img/birthday@2x.png 2x, img/birthday@3x.png 3x" 
+              src="img/birthday.png"
+              alt="bday Party" 
+            />
+            <div class="explore-desc">
+              <h3 class="explore-heading">Birthday Party</h3>
+              <p class="content">Celebrate the joy of birthday with Fresh & Hot pizzas</p>
+            </div>
+          </a>
+          <a class="book-now" href="#">
+            <span>BOOK NOW</span>
+          </a>
+        </div>
+        <div class="explore-slide-wrapper">
+          <a class="explore-slide" href="#">
+            <img 
+              srcset="img/catering.png 1x, img/catering@2x.png 2x, img/catering@3x.png 3x" 
+              src="img/catering.png"
+              alt="bday Party" 
+            />
+            <div class="explore-desc">
+              <h3 class="explore-heading">Catering</h3>
+              <p class="content">Live Domino's Kitchen for weddings / corporate events</p>
+            </div>
+          </a>
+          <a class="book-now" href="#">
+            <span>BOOK NOW</span>
+          </a>
+        </div>
+        <div class="extra-slider">
+            <a class="explore-slide" href="#">
+              <img 
+                srcset="img/catering.png 1x, img/catering@2x.png 2x, img/catering@3x.png 3x" 
+                src="img/catering.png"
+                alt="bday Party" 
+              />
+              <div class="explore-desc">
+                <h3 class="explore-heading">Catering</h3>
+                <p class="content">Live Domino's Kitchen for weddings / corporate events</p>
+              </div>
+            </a>
+            <a class="book-now" href="#">
+              <span>BOOK NOW</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="menu" id="menu">
+      <h2 class="carousel-title">Menu</h2>
+      <div class="menu-slider">
+        <div class="menu-slide-wrapper">
+          <a class="menu-slide" href="cart.html">
+            <img 
+              src="img/i (1).png"
+              alt="explore Menu" 
+            />
+            <div class="menu-desc">
+              <h3 class="menu-heading">VEG PIZZA</h3>
+              <p class="menu-content">A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier</p>
+            </div>
+            <button class="menu-now" href="cart.html">
+              ORDER
+            </button>
+          </a>
+          
+        </div>
+        <div class="menu-slide-wrapper">
+          <a class="menu-slide" href="cart.html">
+            <img 
+              src="img/i (2).png"
+              alt="store Locator" 
+            />
+            <div class="menu-desc">
+              <h3 class="menu-heading">NON-PIZZA</h3>
+              <p class="menu-content">Choose your favourite non-veg pizzas from the Domino's Pizza menu. Get fresh non-veg pizza with your choice of crusts & toppings</p>
+            </div>
+            <button class="menu-now" onclick="location.href='cart.html'">
+              ORDER
+            </button>
+          </a>
+          
+        </div>
+        <div class="menu-slide-wrapper">
+          <a class="menu-slide" href="#">
+            <img  
+              src="img/i (3).png"
+              alt="bday Party" 
+            />
+            <div class="menu-desc">
+              <h3 class="menu-heading">PIZZA MANIA</h3>
+              <p class="menu-content">Indulge into mouth-watering taste of Pizza mania range, perfect answer to all your food cravings</p>
+            </div>
+            <button class="menu-now" onclick="location.href='cart.html'">
+              ORDER
+            </button>
+          </a>
+          
+        </div>
+        <div class="menu-slide-wrapper">
+          <a class="menu-slide" href="#">
+            <img 
+              src="img/i (4).png"
+              alt="bday Party" 
+            />
+            <div class="menu-desc">
+              <h3 class="menu-heading">SIDES & BEVERAGES</h3>
+              <p class="menu-content">Complement your pizza with wide range of sides & beverages available at Domino's Pizza India</p>
+            </div>
+            <button class="menu-now" onclick="location.href='#'">
+              ORDER
+            </button>
+          </a>
+        </div>
+        </div>
+    </div>
+  </div>
+    <div class="app-img">
+      <img
+        class="app-img-desktop" 
+        srcset="img/new_app_img.png 1x, img/new_app_img@2x.png 2x, img/new_app_img@3x.png 3x" 
+        src="img/new_app_img.png"
+        alt="app image" 
+      />
+      <div class="app-download-wrapper">
+        <h3 class="app-download">Unlock Exclusive Offers</h3>
+        <p>For lightning fast ordering experience download the Domino’s app</p>
+        <ul class="appdownload-img">
+          <li>
+            <a href="#">
+              <img 
+                srcset="img/play_store.png 1x, img/play_store@2x.png 2x, img/play_store@3x.png 3x," src="img/play_store.png"
+                alt="google play store"
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img 
+                srcset="img/app_store.png 1x, img/app_store@2x.png 2x, img/app_store@3x.png 3x" src="img/app_store.png"
+                alt="apple app store"
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="seo-content" id="seo-content">
+      <h3 class="content-h3">Domino's Pizza: Delivering Happiness</h3>
+      <p class="content-p">What’s better than having a crispy melty pizza, you ask?</p>
+      <p class="content-p">Having that crispy and melty pizza in the comfort of your own home with the ones you love, we say.</p> 
+      <p class="content-p">With Domino's it is always “Rishton ka time”. Whether it's a treat for your promotion, a kid topping his class or winning the heart of your wife who is too tired to cook after a long day at work! A cheesy slice of the best pizza is all one needs to put things into perspective and start any celebration. Plus, you do not even need to rush to the restaurant to have one now. A call, a few clicks on our website or a few touches on the mobile screen is all you have to do to have that tempting, light-on-the-pocket pizza at your doorstep.</p>
+      <p class="content-p">There is something for everyone here. The vegetarians, non-vegetarians, the sides’ lovers and also the ones who love to have something sweet by the time they reach the last bite of the last slice of pizza slice.
+      </p>
+      <h3 class="content-h3">What We Need - More Choice. More Fun.</h3>
+      <p class="content-p">No matter what the situation, pizza always helps. Especially a pizza that gives you the freedom to choose your toppings - from paneer, crisp capsicum, onion, grilled mushroom, golden corn, black olives, fresh tomato, red paprika, jalapeno, paneer tikka and extra cheese to non-veg toppings such as pepper barbeque chicken, peri-peri chicken, grilled chicken rasher, chicken sausage or chicken tikka- the options are almost endless, anything and everything you can think of that too on top of the crust of your choice - New hand-tossed crust, wheat thin crust, cheese burst crust, classic hand-tossed crust or a fresh pan pizza. Because just like a pizza, Domino's understands you.</p> 
+     <p class="content-p">And to shoo away those end-of-the-month blues while placing your order with our pizza restaurant, check out the everyday pizzas from pizza mania combos with everyday value offer of 2 pizzas starting at just ₹99 (regular size) and ₹199 (medium size) each. </p>
+      </p>
+      <h3 class="content-h3">The promise of 30-minute Delivery</h3>
+      <p class="content-p">The icing on the cake or more aptly the extra cheese on your already fabulous pizza is that Domino’s takes only half an hour for its pizza delivery service. Don’t believe us? Time it if you please. With 1250+ stores present all over India, you can have a Domino’s pizza even while traveling on a train. Yes, you are reading it right, you can enjoy pizza on train too.
+     </p> 
+      <p class="content-p">So stop googling for the “pizza shops near me” and order from your nearest pizza outlet to have a hot box of pizza on your table in the next 30 minutes, or berth at the next halting station.
+      </p>
+      <h3 class="content-h3">Franchise Information</h3>
+      <p class="content-p">Jubilant FoodWorks Limited is the Master Franchisee of Domino’s Pizza in India, Bangladesh, Sri Lanka and Nepal with sole and exclusive rights to own and operate Domino’s Pizza restaurants in these territories. For any franchise-related queries, kindly email us directly at dominos.franchise@jublfood.com
+      </p> 
+      <p class="content-p">We have come across a few instances of fraudsters posing as Jubilant FoodWorks and asking for payment from gullible investors against the promise of a Domino’s franchise. We therefore caution and urge all interested parties to be careful and vigilant and interact only with the email id mentioned above. Anyone dealing with such fraudsters shall be doing so on their own peril, risk and consequences.
+      </p>
+      <p class="content-p">Neither Jubilant FoodWorks nor its Directors/Officers shall be responsible for any loss, harm, damage or fraud that occurs or may occur or arise to any person who decides to access such fake websites, or deal with them.</p>
+    </div>
+    <div class="footer-wrapper" id="footer">
+      <div class="footer-desktop">
+      <ul class="footer-links">
+          <a href="cart.html"><li class="list-header">Menu</li></a>
+          <li><a href="cart.html">Veg Pizza</a></li>
+          <li><a href="cart.html">Chicken Pizza</a></li>
+          <li><a href="cart.html">Pasta</a></li>
+          <li><a href="cart.html">Pizza Crust</a></li>
+          <li><a href="#">Beverages</a></li>
+          <li><a href="#">Pizza Mania</a></li>
+          <li><a href="#">Burger Pizza </a></li>
+        </ul>
+        <ul class="footer-links">
+          <li class="list-header">COMPANY</li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Investor</a></li>
+          <li><a href="#">FeedBack</a></li>
+          <li><a href="#">Ads</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li class="list-header">PIZZA RESTAURANTS</li>
+          <li><a href="#">Restaurants Near Me</a></li>
+          <li><a href="#">Pizza Near Me</a></li>
+          <li><a href="#">Food Near Me</a></li>
+          <li><a href="#">Food Delivery</a></li>
+          <li><a href="#">Italian Food</a></li>
+          <li><a href="#">Order Food Online</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li class="list-header">ABOUT</li>
+          <li><a href="#">Gift card</a></li>
+          <li><a href="#">Card Balance Enquiry</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Virtual Pizza Party</a></li>
+          <li><a href="#">E-Gift Vouchers</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li class="list-header">LEGAL</li>
+          <li><a href="#">Disclaimer</a></li>
+          <li><a href="#">Terms & Conditions</a></li> 
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li class="list-header">SOCIAL MEDIA</li>
+          <li>
+            <ul class="social-links">
+              <li>
+                <a href="https://www.facebook.com/dominospizzaindia" target="_blank">
+                  <img 
+                    srcset="img/fb.png 1x, img/fb@2x.png 2x, img/fb@3x.png 3x" src="img/fb.png"
+                    alt="facebook"
+                  >
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/dominos_india" target="_blank">
+                  <img 
+                    srcset="img/twitter.png 1x, img/twitter@2x.png 2x, img/twitter@3x.png 3x" src="img/twitter.png"
+                    alt="Twitter"
+                  >
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/dominos_india/?hl=en" target="_blank">
+                  <img 
+                    srcset="img/instagram@3x.png 3x, img/instagram.png 1x, img/instagram@2x.png 2x" src="img/instagram.png"
+                    alt="Instagram"
+                  >
+                </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/dominosindia" target="_blank">
+                <img 
+                  srcset="img/You_tube.png 1x, img/You_tube@2x.png 2x, img/You_tube@3x.png 3x" src="img/You_tube.png"
+                  alt="You_tube"
+                >
+              </a>
+            </li>
+          </ul>
+          </li>
+          <li>
+            <a href="tel:18002081234">
+              <img 
+                srcset="img/hello_dominos_20210615.png 1x, img/hello_dominos_20210615@2x.png 2x, img/hello_dominos_20210615@3x.png 3x" src="img/hello_dominos_20210615.png"
+                alt="Domino's Customer Care Number" 
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="footer-links footer-mobile">
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="#">T & C</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <ul class="help-links">
+        <li>
+          <ul class="share-links">
+            <li>
+              <a href="https://www.facebook.com/dominospizzaindia" target="_blank">
+                <img 
+                  srcset="img/fb.png 1x, img/fb@2x.png 2x, img/fb@3x.png 3x" src="img/fb.png"
+                  alt="facebook"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/dominos_india" target="_blank">
+                <img 
+                  srcset="twitter.png 1x, twitter@2x.png 2x, twitter@3x.png 3x" src="twitter.png"
+                  alt="Twitter"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/dominos_india/?hl=en" target="_blank">
+                <img 
+                   src="instagram.png"
+                  alt="Instagram"
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/dominosindia" target="_blank">
+                <img 
+                  src="img/You_tube.png"
+                  alt="You_tube"
+                >
+              </a>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <a href="tel:18002081234">
+            <img 
+              srcset="./assets/hello_dominos_20210615.png 1x, ./assets/hello_dominos_20210615@2x.png 2x, ./assets/hello_dominos_20210615@3x.png 3x" src="./assets/hello_dominos_20210615.png"
+              alt="Domino's Customer Care Number" 
+            >
+          </a>
+        </li>
+      </ul>
+     <div class="copyright">
+      Copyright &copy; .Developed By Sharmistha Pal.
+    </div>
+  </div>
+  </div>
+  <script>
+    function openDrawer () {
+    document.getElementById("sideNavBar").style.width = "75vw";
+    document.getElementById("sideNavBar").style.visibility = "visible";
+    document.getElementById("sideNavOverlay").classList.add('side-nav-overlay');
+    document.getElementById('landscape-mode').classList.add('no-scroll');
+  }
+
+    function closeDrawer () {
+    event.stopPropagation();
+    document.getElementById("sideNavBar").style.width = "0";
+    document.getElementById("sideNavBar").style.visibility = "hidden";
+    document.getElementById("sideNavOverlay").classList.remove('side-nav-overlay');
+    document.getElementById('landscape-mode').classList.remove('no-scroll');
+  }
+  var currentIndex = 0;
+var slides = document.querySelectorAll('.offers-slide');
+
+var currentIndex = 0;
+var slides = document.querySelectorAll('.offers-slide');
+
+function showSlide(index) {
+  slides.forEach(function(slide) {
+    slide.style.transform = 'translateX(' + (-index * 310) + 'px)'; // Adjust according to image width and margin
+  });
+}
+
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = slides.length - 1;
+  }
+  showSlide(currentIndex);
+}
+
+// Automatic rotation every 2 seconds
+setInterval(function() {
+  nextSlide();
+}, 2000);
+
+  
+    function corpMenuTopClicked(){
+        window.dataLayer.push({
+          event: "corporateEnquiry",
+          eventCategory: 'Corporate Enquiry',
+          eventAction: 'Top Available Options'
+        });
+        window.dataLayer.push({
+          event: "corporateEnquiry",
+          eventCategory: 'Corporate Enquiry',
+          eventAction: 'Virtual Pizza Party'
+        });
+      }
+
+    var slider = tns({
+  container: '.offers-slider',
+  loop: false,
+  touch: true,
+  mouseDrag: true,
+  nav: false,
+  controls: false,
+  responsive: {
+    320: {
+      mouseDrag: true,
+      items: 1.2,
+      gutter: 10,
+    },
+    640: {
+      mouseDrag: true,
+      items: 2.2,
+      gutter: 10,
+    },
+    900: {
+      mouseDrag: false,
+      items: 2.2,
+      gutter: 20,
+      container: '.offers-slider',
+      controlsContainer: '#customize-controls',
+    }
+  }
+});
+
+document.querySelector('.prev').onclick = function () {
+  event.stopPropagation();
+  document.querySelector('.next').style.visibility = "visible";
+  var isFirstItemVisible = slider.getInfo().slideItems[1].classList.contains('tns-slide-active');
+  if(isFirstItemVisible) {
+    document.querySelector('.prev').style.visibility = "hidden";
+  }
+  slider.goTo('prev');
+};
+
+document.querySelector('.next').onclick = function () {
+  event.stopPropagation();
+  var isLastItemVisible =  slider.getInfo().slideItems[slider.getInfo().slideItems.length - 2].classList.contains('tns-slide-active');
+  if(isLastItemVisible) {
+    document.querySelector('.next').style.visibility = "hidden";
+  } 
+  document.querySelector('.prev').style.visibility = "visible";
+  slider.goTo('next');
+};
+
+  </script>
+</body>
+</html>
